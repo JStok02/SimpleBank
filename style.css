@@ -165,11 +165,16 @@ nav {
 .total {
   grid-row: 5 / 6;
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
   padding: 0 0.3rem;
   margin-top: 1rem;
 }
 
+.total__inner {
+  display: flex;
+  align-items: baseline;
+}
 .total__label {
   font-size: 1.2rem;
   font-weight: 500;
@@ -192,7 +197,7 @@ nav {
 }
 
 .btn--sort {
-  margin-left: auto;
+  /* margin-left: auto; */
   border: none;
   background: none;
   font-size: 1.3rem;
@@ -288,4 +293,39 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+@media screen and (max-width:1200px){
+  nav {
+    flex-wrap: wrap;
+  }
+  .app {
+    display: block;
+  }
+  .total, .total__inner {
+    flex-wrap: wrap;
+  }
+  .transactions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .transactions__row {
+    max-width: 50%;
+    width: 100%;
+  }
+  .balance {
+    flex-wrap: wrap;
+  }
+  .balance__value {
+    font-size: 38px;
+  }
+
+}
+@media screen and (max-width:760px){
+  .transactions__row {
+    max-width: 100%;
+  }
+  .balance__value {
+    font-size: 28px;
+  }
 }
